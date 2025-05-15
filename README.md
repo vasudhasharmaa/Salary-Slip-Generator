@@ -2,7 +2,7 @@
 
 A modern, web-based salary slip generator with a clean dark theme interface. Generate professional PDF salary slips with ease.
 
-![TWO EIGHT ONE](logo.png)
+
 
 ## Features
 
