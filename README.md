@@ -3,6 +3,9 @@
 A modern, web-based salary slip generator with a clean dark theme interface. Generate professional PDF salary slips with ease.
 
 
+## 🔗 Live Application
+Access the application here: [Salary Slip Generator](https://vasudhasharmaa.github.io/Salary-Slip-Generator/)
+
 
 ## Features
 
