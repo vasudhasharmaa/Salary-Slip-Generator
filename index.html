@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Slip Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Salary Slip Generator</h1>
+        <form id="salary-form">
+            <div class="form-section">
+                <h2>Employee Details</h2>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeId">Employee Code</label>
+                    <input type="text" id="employeeId" name="employeeId" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" name="department" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <input type="text" id="designation" name="designation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateOfJoining">Date of Joining</label>
+                    <input type="date" id="dateOfJoining" name="dateOfJoining" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="salaryMonth">Salary Month</label>
+                    <input type="month" id="salaryMonth" name="salaryMonth" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Earnings</h2>
+                
+                <div class="form-group">
+                    <label for="basicSalary">Basic Salary</label>
+                    <input type="number" id="basicSalary" name="basicSalary" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hra">HRA</label>
+                    <input type="number" id="hra" name="hra" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="medicalAllowance">Medical Allowance</label>
+                    <input type="number" id="medicalAllowance" name="medicalAllowance" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialAllowance">Special Allowance</label>
+                    <input type="number" id="specialAllowance" name="specialAllowance" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="npsContribution">NPS Contribution</label>
+                    <input type="number" id="npsContribution" name="npsContribution" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gratuity">Gratuity</label>
+                    <input type="number" id="gratuity" name="gratuity" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pli">PLI</label>
+                    <input type="number" id="pli" name="pli" min="0" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Deductions</h2>
+                
+                <div class="form-group">
+                    <label for="providentFund">Provident Fund</label>
+                    <input type="number" id="providentFund" name="providentFund" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="esi">ESI</label>
+                    <input type="number" id="esi" name="esi" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tds">TDS/IT</label>
+                    <input type="number" id="tds" name="tds" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="npsDeduction">NPS Contribution</label>
+                    <input type="number" id="npsDeduction" name="npsDeduction" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="professionalTax">Professional Tax</label>
+                    <input type="number" id="professionalTax" name="professionalTax" min="0" required>
+                </div>
+            </div>
+
+            <button type="submit">Generate Salary Slip</button>
+        </form>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Preview Salary Slip</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe id="pdfPreview" style="width:100%; height:500px;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button id="saveButton">Save PDF</button>
+                <button id="cancelButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        window.jsPDF = window.jspdf.jsPDF;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
